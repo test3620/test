@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block titre %}
+    Page des membres
+{% endblock %}
+
+{% block contenu %}
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+    
+            <div class="d-flex justify-content-between align-items-center">
+                    <h2>LES MEMBRES</h2>
+                    <ol>
+                        <li><a href="{% url "accueil" %}">ACCUEIL</a></li>
+                        <li>NOS MEMBRES</li>
+                    </ol>
+            </div>
+    
+            </div>
+        </section><!-- End Breadcrumbs -->
+
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+    
+                <div class="row">
+                    {% for element in membre %}
+                        <div class="col-lg-6" data-aos="fade-up">
+                            <div class="testimonial-item">
+                                <img src="{{element.image.url}}" class="testimonial-img" alt="Photo">
+                                <h3><!-- Nom et Prénom -->
+                                    {{element.nom}} {{element.prenom}}
+                                </h3>
+                                <h4><!-- Profession -->
+                                    {{element.profession}}
+                                </h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Pour le groupe cible, le résultat mérite d'être pris en compte jusqu'à ce que la compagnie aérienne prenne le relais. Mais les accusateurs en ont besoin et ont besoin d’une certaine discipline. Un malaise, mais toujours un sourire {{element.date_adhesion}}.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}
