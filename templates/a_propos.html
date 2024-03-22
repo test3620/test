@@ -1,7 +1,150 @@
+<!-- === ETENDU DU FICHIER 'base.html' ===-->
 {% extends "base.html" %}
 
+<!-- === TITRE DE L'ONGLET DE PAGE ===-->
 {% block titre %}Page de à propos{% endblock %}
 
+<!-- === CONTENUS DE LA PAGE ===-->
 {% block contenu %}
-    <h1>Contenu en cour ...</h1>
+
+    {% load static %}
+    
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>A PROPOS</h2>
+          <ol>
+            <li><a href="index.html">ACCUEIL</a></li>
+            <li>A PROPOS</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bi bi-briefcase"></i></div>
+              <h4 class="title"><a href="">Règlement intérieur</a></h4>
+              <p class="description">Découvrez les règles qui régissent l'association</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="">Status</a></h4>
+              <p class="description">Jetez un coup d'oeil sur le statut de l'association</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-bar-chart"></i></div>
+              <h4 class="title"><a href="">Nos projets</a></h4>
+              <p class="description">Beaucoup de projets sont en cour de réalisation.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bi bi-binoculars"></i></div>
+              <h4 class="title"><a href="">Nos visions</a></h4>
+              <p class="description">Notre vision est de voir un jour notre village devenu une grande ville du togo.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bi bi-brightness-high"></i></div>
+              <h4 class="title"><a href="">Plus d'info</a></h4>
+              <p class="description">Nous avons beaucoup à dire sur l'association.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+              <h4 class="title"><a href="">Nos réalisations</a></h4>
+              <p class="description">Beaucoup de projets sont réalisés dans notre villqge.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Certaines <strong>activés</strong> que nous proposons</h2>
+          <p>Il faut beaucoup de peine pour en bénéficier. Ses besoins résultent de quelque chose qui l’éloigne réellement. Laissez-les être ce qu'ils veulent. N'importe qui que l'on désire. Et celui qui gêne ne reçoit pas les autres. Parce qu'il devrait fuir dans ce bureau de complaisance qui est ici..</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                  <h4>L'analyse</h4>
+                  <p>Qui va les accepter dans leur intégralité alors que vous n’en voyez aucun ?
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                  <h4>L'informatique'</h4>
+                  <p>Le plaisir ou l'existence de la répudiation dont nous devons recevoir.
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                  <h4>La tontine</h4>
+                  <p>Il souhaite être pardonné, afin qu'il ne soit rien à la douceur de la flatterie.
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                  <h4>L'enseignement</h4>
+                  <p>En raison de notre sagesse ici et de cette douleur, rien de tout cela n'est présent
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-7 ml-auto" data-aos="fade-left" data-aos-delay="100">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <figure>
+                  <img src="{% static "assets/img/features-1.png" %}" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <figure>
+                  <img src="{% static "assets/img/features-2.png" %}" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <figure>
+                  <img src="{% static "assets/img/features-3.png" %}" alt="" class="img-fluid">
+                </figure>
+              </div>
+              <div class="tab-pane" id="tab-4">
+                <figure>
+                  <img src="{% static "assets/img/features-4.png" %}" alt="" class="img-fluid">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Features Section -->
+
 {% endblock %}

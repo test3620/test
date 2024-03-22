@@ -1,26 +1,25 @@
+<!-- === ETENDU DU FICHIER 'base.html' ===-->
 {% extends "base.html" %}
 
-{% block titre %}
-    Page des membres
-{% endblock %}
+<!-- === TITRE DE L'ONGLET DE PAGE ===-->
+{% block titre %}Page des membres{% endblock %}
 
+<!-- === CONTENUS DE LA PAGE ===-->
 {% block contenu %}
-    <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
-    
-            <div class="d-flex justify-content-between align-items-center">
-                    <h2>LES MEMBRES</h2>
-                    <ol>
-                        <li><a href="{% url "accueil" %}">ACCUEIL</a></li>
-                        <li>NOS MEMBRES</li>
-                    </ol>
-            </div>
-    
+                <div class="d-flex justify-content-between align-items-center">
+                        <h2>MEMBRES</h2>
+                        <ol>
+                            <li><a href="{% url "accueil" %}">ACCUEIL</a></li>
+                            <li>MEMBRES</li>
+                        </ol>
+                </div>
             </div>
         </section><!-- End Breadcrumbs -->
+        
 
         <!-- ======= Testimonials Section ======= -->
         <section id="testimonials" class="testimonials">
@@ -29,7 +28,7 @@
                 <div class="row">
                     {% for element in membre %}
                         <div class="col-lg-6" data-aos="fade-up">
-                            <div class="testimonial-item">
+                            <div class="testimonial-item mt-4">
                                 <img src="{{element.image.url}}" class="testimonial-img" alt="Photo">
                                 <h3><!-- Nom et Prénom -->
                                     {{element.nom}} {{element.prenom}}
@@ -48,5 +47,5 @@
                 </div>
             </div>
         </section>
-    </main>
+
 {% endblock %}

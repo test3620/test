@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     {% load static %}
     <head>
         <meta charset="utf-8">
@@ -10,15 +10,15 @@
         <meta content="" name="keywords">
 
         <!-- Favicons -->
-        <link href="{% static "assets/img/favicon.png" %}" rel="icon">
-        <link href="{% static "assets/img/apple-touch-icon.png" %}" rel="apple-touch-icon">
+        <link href="{% static "assets/img/favicon1.png" %}" rel="icon">
+        <link href="{% static "static/assets/img/apple-touch-icon1.png" %}" rel="apple-touch-icon">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
         <!-- Vendor CSS Files -->
         <link href="{% static "assets/vendor/animate.css/animate.min.css" %}" rel="stylesheet">
-        <link href="{% static "assets/vendor/aos/aos.css" rel="stylesheet" %}">
+        <link href="{% static "assets/vendor/aos/aos.css" %}" rel="stylesheet">
         <link href="{% static "assets/vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
         <link href="{% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %}" rel="stylesheet">
         <link href="{% static "assets/vendor/boxicons/css/boxicons.min.css" %}" rel="stylesheet">
@@ -26,29 +26,23 @@
         <link href="{% static "assets/vendor/swiper/swiper-bundle.min.css" %}" rel="stylesheet">
 
         <!-- Template Main CSS File -->
-        <link href="{% static "css/style.css" %}" rel="stylesheet">
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
-        <!-- =======================================================
-        * Template Name: Flattern
-        * Updated: Jan 29 2024 with Bootstrap v5.3.2
-        * Template URL: https://bootstrapmade.com/flattern-multipurpose-bootstrap-template/
-        * Author: BootstrapMade.com
-        * License: https://bootstrapmade.com/license/
-        ======================================================== -->
     </head>
 
     <body>
-
-        <!-- ======= Top Bar ======= -->
+        <!-- ======= TOP DE PAGE ======= -->
         {% include "top_bar.html" %}
 
-        <!-- ======= Header ======= -->
+        <!-- ======= TÊTE DE PAGE ======= -->
         {% include "header.html" %}
-
-        <!-- ======= Contenu ======= -->
-        {% block contenu %}{% endblock %}
-
-        <!-- ======= Footer ======= -->
+        
+        <!-- ======= CONTENU DE PAGE ======= -->
+        <main id="main">
+            {% block contenu %}{% endblock %}
+        </main><!-- End #main -->
+        
+        <!-- ======= PIED DE PAGE ======= -->
         {% include "footer.html" %}
 
         <!-- Vendor JS Files -->
@@ -61,7 +55,7 @@
         <script src="{% static "assets/vendor/php-email-form/validate.js" %}"></script>
 
         <!-- Template Main JS File -->
-        <script src="{% static "js/main.js" %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
 
     </body>
 
